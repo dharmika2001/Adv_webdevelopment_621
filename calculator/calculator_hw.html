@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+ <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width-device-width, initial-scale=1.0">
+  <title>Simple Calculator using HTML, CSS and JavaScript</title>
+  <link rel="stylesheet" href="samples.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/9.4.4/math.min.js"></script>
+</head>
+ <body>
+ <h1>SCIENTIFIC CALCULATOR</h1>
+<table class="calculator" >
+  <tr>
+    <td colspan="3"> <input class="output" type="text" id="result" disabled /> </td>
+    <td> <input type="button" value="CE" onclick="clearbutton()" id="clear" /> </td>
+  </tr>
+  <tr>
+    <td> <input type="button" value="1" onclick="display('1')" id="toggle" /> </td>
+    <td> <input type="button" value="2" onclick="display('2')" id="toggle" /> </td>
+    <td> <input type="button" value="3" onclick="display('3')" id="toggle"/> </td>
+    <td> <input type="button" value="/" onclick="display('/')" id="toggle"/> </td>
+  </tr>
+  <tr>
+    <td> <input type="button" value="4" onclick="display('4')" id="toggle" /> </td>
+    <td> <input type="button" value="5" onclick="display('5')" id="toggle" /> </td>
+    <td> <input type="button" value="6" onclick="display('6')" id="toggle"/> </td>
+    <td> <input type="button" value="-" onclick="display('-')" id="toggle"/> </td>
+  </tr>
+  <tr>
+    <td> <input type="button" value="7" onclick="display('7')" id="toggle" /> </td>
+    <td> <input type="button" value="8" onclick="display('8')" id="toggle" /> </td>
+    <td> <input type="button" value="9" onclick="display('9')" id="toggle" /> </td>
+    <td> <input type="button" value="+" onclick="display('+')" id="toggle"/> </td>
+  </tr>
+  <tr>
+    <td> <input type="button" value="." onclick="display('.')" id="toggle"/> </td>
+    <td> <input type="button" value="0" onclick="display('0')" id="toggle"/> </td>
+    <td> <input type="button" value="=" onclick="calculate()" id="toggle" /> </td>
+    <td> <input type="button" value="*" onclick="display('*')" id="toggle"/> </td>
+  </tr>
+  <tr>
+    <td><input type="button" value="√" onclick="Scientificfunction('√')"id="toggle" /></td>
+    <td><input type="button" value="cos" onclick="Scientificfunction('cos')" id="toggle"/></td>
+    <td><input type="button" value="sin" onclick="Scientificfunction('sin')" id="toggle"></td>
+    <td><input type="button" value="tan" onclick="Scientificfunction('tan')"id="toggle"/></td>
+  </tr>
+  <tr>
+    <td><input type="button" value="[" onclick="display('[')" id="toggle" /></td>
+    <td><input type="button" value="]" onclick="display(']')" id="toggle"/></td>
+    <td><input type="button" value="%" onclick="display('%')" id="toggle"/></td>
+    <td><input type="button" value="**"onclick="Scientificfunction('pow')" id="toggle"/></td>
+  </tr>
+</table>
+ <script type="text/javascript" src="script.js"></script>
+ </body>
+</html>
