@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Thank you!</title>
+    <style>
+    body {
+        background-color: #eee9e9;
+        color: #635252;
+        font-family: sans-serif;
+    }
+    .center{
+        text-align: center;
+    }
+    </style>
+</head>
+<body>
+    <div class="center">
+    <h1>Thank you for Registering!</h1>
+    </div>
+
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+        {% for message in messages %}
+            {{ message }}
+        {% endfor %}
+    {% endif %}
+    {% endwith %}
+
+</body>
+</html>

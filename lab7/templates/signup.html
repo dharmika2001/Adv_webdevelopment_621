@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sign Up</title>
+    <style>
+    body {
+        background-color: #eee9e9;
+        color: #0b0c0b;
+        font-family: sans-serif;
+    }
+    .center{
+        text-align: center;
+    }
+    .button{
+        color: blue;
+        font-size: 20px;
+        
+    }
+    .align{
+        display: flex;
+    }
+    </style>
+</head>
+<body>
+    <h1>Sign Up</h1>
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+        {% for message in messages %}
+            {{ message }}
+        {% endfor %}
+    {% endif %}
+    {% endwith %}
+    <div class="center">
+    <form method="post" action="{{ url_for('signup') }}">
+        <div class="align">
+        <label for="first_name">First Name:</label>
+        <input type="text" id="first_name" name="first_name" required>
+        <br>
+        </div>
+        <div class="align">
+        <label for="last_name">Last Name:</label>
+        <input type="text" id="last_name" name="last_name" required>
+        <br>
+        </div>
+        <div class="align">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <br>
+        </div>
+        <div class ="align">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <br>
+        </div>
+        <div class = "align">
+        <label for="confirm_password">Confirm Password:</label>
+        <input type="password" id="confirm_password" name="confirm_password" required>
+        <br>
+        </div>
+        <input class="button" type="submit" value="Sign Up">
+    </form>
+    </div>
+</body>
+</html>
